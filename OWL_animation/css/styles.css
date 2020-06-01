@@ -1,0 +1,74 @@
+body{
+    background-color: #191C21;
+}
+
+.owl-animation-block{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 50px auto;
+}
+
+.owl-central{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.owl-central img{
+    width: 100%;
+}
+
+.owl-central-img{
+    max-width: 100%;
+    position: absolute;
+    /* top: 8px; */
+    /* left: 6px; */
+}
+.img-opac{
+    animation-name: animationNameSecond;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 10;
+}
+
+.owl-central-text{
+    position: absolute;
+    animation-name: animationName;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 10;
+    /* animation-direction: alternate; */
+    /* animation-fill-mode: forwards; */
+}
+
+
+
+
+@keyframes animationName {
+    0%  {transform: rotateZ(0deg)}
+    40% {
+            transform: rotateZ(60deg);
+            opacity: 0.9;
+    }
+    41% {
+        transform: rotateZ(120deg);
+        opacity: 1;
+        }
+    50% {
+            transform: rotateZ(180deg);
+            opacity: 0;
+        }
+    59% {
+            transform: rotateZ(300deg);
+            opacity: 0.9;
+        }
+    100% { transform: rotateZ(360deg) }
+}
+
+
+@keyframes animationNameSecond {
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
